@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PeliApi.DTO_s;
 using PeliApi.Entidades;
+using PeliApi.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +32,17 @@ namespace PeliApi.Controllers
 
             return dtos;
 
+        }
+
+
+        protected async Task<List<TDTO>> Get<TEntidad, TDTO>(PaginacionDTO paginacionDTO) where TEntidad : class
+        {
+            var queryable = context.Set<TEntidad>().AsNoTracking().AsQueryable();
+            await HttpContext.InsertarParametroPaginacion(queryable, paginacionDTO.CantidadRegistroPorPagina);
+            var entidades = await queryable.Paginar(paginacionDTO).ToListAsync();
+            var dtos = mapper.Map<List<TDTO>>(entidades);
+
+            return dtos;
         }
 
         protected async Task<ActionResult<TDTO>> Get<TEntidad, TDTO>(int id) where TEntidad : class, IId

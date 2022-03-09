@@ -16,7 +16,7 @@ namespace PeliApi.Controllers
 {
     [ApiController]
     [Route("api/actores")]
-    public class ActoresController : ControllerBase
+    public class ActoresController : CustomBaseController
     {
         private readonly ApplicationDbContext context;
         private readonly IMapper mapper;
@@ -24,6 +24,7 @@ namespace PeliApi.Controllers
         private readonly string contenedor = "actores";
 
         public ActoresController(ApplicationDbContext context, IMapper mapper, IAlmacenadorArchivos almacenadorArchivos)
+            :base(context, mapper)
         {
             this.context = context;
             this.mapper = mapper;
@@ -33,12 +34,14 @@ namespace PeliApi.Controllers
         [HttpGet]
         public async Task<ActionResult<List<ActorDTO>>> Get([FromQuery] PaginacionDTO paginacionDTO)
         {
-            var queryable = context.Actores.AsQueryable();
-            await HttpContext.InsertarParametroPaginacion(queryable, paginacionDTO.CantidadRegistroPorPagina);
-            var entidades = await queryable.Paginar(paginacionDTO).ToListAsync();
-            var dtos = mapper.Map<List<ActorDTO>>(entidades);
+            //var queryable = context.Actores.AsQueryable();
+            //await HttpContext.InsertarParametroPaginacion(queryable, paginacionDTO.CantidadRegistroPorPagina);
+            //var entidades = await queryable.Paginar(paginacionDTO).ToListAsync();
+            //var dtos = mapper.Map<List<ActorDTO>>(entidades);
 
-            return dtos;
+            //return dtos;
+
+            return await Get<Actor, ActorDTO>(paginacionDTO);
         }
 
         [HttpGet("{id:int}", Name = "obtenerActor")]
