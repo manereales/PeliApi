@@ -44,7 +44,7 @@ namespace PeliApi.Controllers
             return await Get<Actor, ActorDTO>(paginacionDTO);
         }
 
-        [HttpGet("{id:int}", Name = "obtenerActor")]
+        [HttpGet("{id}", Name = "obtenerActor")]
         public async Task<ActionResult<ActorDTO>> Get(int id)
         {
 
