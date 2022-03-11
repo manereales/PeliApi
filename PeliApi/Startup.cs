@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +12,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using NetTopologySuite;
+using NetTopologySuite.Geometries;
+using PeliApi.Helpers;
 using PeliApi.Servicios;
 
 namespace PeliApi
@@ -32,8 +36,22 @@ namespace PeliApi
             services.AddTransient<IAlmacenadorArchivos, AlmacenadorArchivosLocal>();
             services.AddHttpContextAccessor();
 
+            services.AddSingleton<GeometryFactory>(NtsGeometryServices.Instance.CreateGeometryFactory(srid: 4326));
+
+            services.AddSingleton(provider =>
+            
+                new MapperConfiguration(
+                       confing =>
+                       {
+                           var geometryFactory = provider.GetRequiredService<GeometryFactory>();
+                           confing.AddProfile(new AutoMapperProfiles(geometryFactory));
+                       }).CreateMapper()
+            );
+            
+
             services.AddDbContext<ApplicationDbContext>(options =>
-           options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+           options.UseSqlServer(Configuration.GetConnectionString("defaultConnection"),
+           sqlServerOptions => sqlServerOptions.UseNetTopologySuite()));
 
             services.AddControllers().AddNewtonsoftJson();
         }

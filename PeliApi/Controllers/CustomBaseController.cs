@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PeliApi.DTO_s;
@@ -74,14 +75,45 @@ namespace PeliApi.Controllers
 
         protected async Task<ActionResult> Put<TCreacion, TEntidad>(TCreacion creacion, int id) where TEntidad : class, IId
         {
-            var entidades = mapper.Map<TEntidad>(creacion);
+            var entidad = mapper.Map<TEntidad>(creacion);
 
-            if (entidades == null)
+
+            entidad.Id = id;
+
+            context.Entry(entidad).State = EntityState.Modified;
+
+            await context.SaveChangesAsync();
+
+            return NoContent();
+
+        }
+
+        protected async Task<ActionResult> Patch<TCreacion, TEntidad>(int id, JsonPatchDocument<TCreacion> patchDocument) where TCreacion : class where TEntidad : class, IId
+        {
+            if (patchDocument == null)
             {
                 return BadRequest();
             }
 
-            mapper.Map(creacion, entidades);
+            var entidadDb = await context.Set<TEntidad>().AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+
+            if (entidadDb == null)
+            {
+                return NotFound();
+            }
+
+            var entidadDTO = mapper.Map<TCreacion>(entidadDb);
+
+            patchDocument.ApplyTo(entidadDTO, ModelState);
+
+            var esValido = TryValidateModel(entidadDTO);
+
+            if (!esValido)
+            {
+                return BadRequest(ModelState);
+            }
+
+            mapper.Map(entidadDTO, entidadDb);
 
             await context.SaveChangesAsync();
 

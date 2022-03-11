@@ -71,4 +71,7 @@ C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\PeliApi.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\PeliApi.pdb
 C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\PeliApi.csprojAssemblyReference.cache
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.Core.dll
+C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll
+C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\NetTopologySuite.IO.SqlServerBytes.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\PeliApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\EFCoreSqlServerNetTopologySuite.cs
