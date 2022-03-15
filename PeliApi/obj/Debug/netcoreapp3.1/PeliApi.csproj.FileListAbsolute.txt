@@ -22,6 +22,7 @@ C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.Entit
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -38,6 +39,7 @@ C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.Ident
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\NetTopologySuite.dll
+C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\NetTopologySuite.IO.SqlServerBytes.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
@@ -45,6 +47,7 @@ C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\System.Componen
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.Core.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\System.Memory.Data.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
@@ -61,6 +64,8 @@ C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\runtimes\win-x8
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\PeliApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\EFCoreSqlServerNetTopologySuite.cs
 C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\PeliApi.AssemblyInfoInputs.cache
 C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\PeliApi.AssemblyInfo.cs
 C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\PeliApi.RazorTargetAssemblyInfo.cache
@@ -70,8 +75,3 @@ C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\staticwebassets
 C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\PeliApi.dll
 C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\PeliApi.pdb
 C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\PeliApi.csprojAssemblyReference.cache
-C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.Core.dll
-C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll
-C:\Users\PC\source\repos\PeliApi\PeliApi\bin\Debug\netcoreapp3.1\NetTopologySuite.IO.SqlServerBytes.dll
-C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\PeliApi.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\PC\source\repos\PeliApi\PeliApi\obj\Debug\netcoreapp3.1\EFCoreSqlServerNetTopologySuite.cs
